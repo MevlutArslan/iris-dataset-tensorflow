@@ -29,11 +29,16 @@ petalwidth_max = df["petalwidth"].max()
 
 df.petalwidth = df.petalwidth.apply(lambda num: num / petalwidth_max)
 
-# print(df.shape)
 x_train = df[:120]
 y_train = y[:120]
 
 x_validate = df[120:]
 y_validate = y[120:]
 
+# x_test = df[120:]
+# y_test = df[120:]
+
 x_dim = len(df.iloc[0])
+
+
+# df = tf.contrib.data

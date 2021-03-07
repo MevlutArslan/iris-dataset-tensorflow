@@ -13,6 +13,15 @@ class Iris_Model(tf.keras.Model):
         super(Iris_Model, self).__init__()
 
         self.input_layer = Dense(n_inputs, activation=ReLU)
-        self.first_dense_layer = Dense(n_inputs, activation=Softmax)
-
+        self.dense_layer = Dense(128, activation=ReLU)
+        self.output_layer = Dense(n_output, activation=Softmax)
     
+    def call(self, inputs):
+
+        output = self.input_layer(inputs)
+
+        output = self.dense_layer(output)
+
+        output = self.output_layer(output)
+
+        return output
