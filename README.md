@@ -7,4 +7,5 @@ Project finished, I think
 
 2. I messed up big time and need to asses.
 
-I will try to use the model in diffent datasets to see which is the case
+I will try to use the model in diffent datasets to see which is the case.
+
